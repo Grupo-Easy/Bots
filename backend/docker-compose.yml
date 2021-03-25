@@ -1,0 +1,8 @@
+version: "3.0"
+
+services:
+  bot:
+    build: .
+    command: npm start
+    volumes:
+      - .:/usr/backend

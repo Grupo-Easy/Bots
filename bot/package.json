@@ -1,0 +1,18 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "puppeteer": "^5.5.0",
+    "readline-sync": "^1.4.10"
+  },
+  "scripts": {
+    "start": "node Prio.js",
+    "dev": "nodemon Uber.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
