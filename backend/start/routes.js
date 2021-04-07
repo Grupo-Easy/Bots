@@ -26,9 +26,11 @@ Route.group(() => {
   Route.post("bp", "BpController.create");
   Route.post("prio", "PrioController.create");
   Route.post("uber", "UberController.create");
+  Route.post("bolt", "BoltController.create");
   Route.post("viaverde", "ViaVerdeController.create");
   Route.post("freenow", "FreeNowController.create");
   Route.get("freenow", "GetDataController.store");
+  Route.get("bolt", "BoltController.index");
   Route.get("reset", "BotController.index");
 })
   .as("Bots")

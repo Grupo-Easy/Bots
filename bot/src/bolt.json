@@ -1,0 +1,17 @@
+{
+	"auth": {
+		"username": "easycablx@gmail.com",
+		"password": "69v987des!"
+	},
+	"warnings": {
+		"invalid-auth": "#ember3 > div > div > div.alert.alert-warning",
+		"valid-in-dashboard": "#ember23 > div > div > div > div.col-md-9.col-sm-8.content > div.dashhead > div > h3"
+	},
+	"dashboard": {
+		"name": "#ember23 > div > div > div > div.col-md-9.col-sm-8.content > div:nth-child(2) > div:nth-child(1) > table > tbody > tr > td:nth-child(1)",
+		"status": "#ember23 > div > div > div > div.col-md-9.col-sm-8.content > div:nth-child(2) > div:nth-child(1) > table > tbody > tr > td:nth-child(2)"
+	},
+	"login-username-xpath": "/html/body/div[1]/div/div/form/div[1]/input",
+	"login-password-xpath": "/html/body/div[1]/div/div/form/div[2]/input",
+	"login-button-xpath": "/html/body/div[1]/div/div/form/button"
+}
