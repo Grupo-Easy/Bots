@@ -4,7 +4,9 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
+    "csv-parser": "^3.0.0",
     "dotenv": "^8.2.0",
+    "fs": "^0.0.1-security",
     "puppeteer": "^5.5.0",
     "readline-sync": "^1.4.10"
   },

@@ -23,6 +23,15 @@ class BoltController {
 
     return await bolt.create(data);
   }
+
+  async search({ params, response }) {
+    const name = params.name.replace("%20", " ");
+    const db = await bolt.findBy("name", name);
+    if (db) {
+      return db;
+    }
+    return response.status(404).send("");
+  }
 }
 
 module.exports = BoltController;

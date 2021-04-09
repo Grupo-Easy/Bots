@@ -5,11 +5,15 @@
 	},
 	"warnings": {
 		"invalid-auth": "#ember3 > div > div > div.alert.alert-warning",
-		"valid-in-dashboard": "#ember23 > div > div > div > div.col-md-9.col-sm-8.content > div.dashhead > div > h3"
+		"valid-in-dashboard": "h3.dashhead-title"
 	},
 	"dashboard": {
-		"name": "#ember23 > div > div > div > div.col-md-9.col-sm-8.content > div:nth-child(2) > div:nth-child(1) > table > tbody > tr > td:nth-child(1)",
-		"status": "#ember23 > div > div > div > div.col-md-9.col-sm-8.content > div:nth-child(2) > div:nth-child(1) > table > tbody > tr > td:nth-child(2)"
+		"name": "#ember22 > div > div > div > div.col-md-9.col-sm-8.content > div:nth-child(2) > div:nth-child(1) > table > tbody > tr > td:nth-child(1)",
+		"status": "#ember22 > div > div > div > div.col-md-9.col-sm-8.content > div:nth-child(2) > div:nth-child(1) > table > tbody > tr > td:nth-child(2)"
+	},
+	"pages": {
+		"history-order": "#ember27",
+		"history-search": "#ember43 > div"
 	},
 	"login-username-xpath": "/html/body/div[1]/div/div/form/div[1]/input",
 	"login-password-xpath": "/html/body/div[1]/div/div/form/div[2]/input",

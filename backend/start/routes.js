@@ -24,13 +24,16 @@ Route.group(() => {
 
 Route.group(() => {
   Route.post("bp", "BpController.create");
-  Route.post("prio", "PrioController.create");
   Route.post("uber", "UberController.create");
   Route.post("bolt", "BoltController.create");
-  Route.post("viaverde", "ViaVerdeController.create");
+  Route.post("prio", "PrioController.create");
   Route.post("freenow", "FreeNowController.create");
+  Route.post("viaverde", "ViaVerdeController.create");
+  Route.post("bolt/lucros", "BoltGanhoController.create");
   Route.get("freenow", "GetDataController.store");
   Route.get("bolt", "BoltController.index");
+  Route.get("bolt/driver/:name", "BoltController.search");
+  Route.get("bolt/lucros/:key", "BoltGanhoController.index");
   Route.get("reset", "BotController.index");
 })
   .as("Bots")
