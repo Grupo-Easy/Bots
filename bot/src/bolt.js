@@ -2,6 +2,7 @@ require("dotenv").config();
 const puppeteer = require("puppeteer");
 const axios = require("axios").default;
 const config = require("./bolt.json");
+const push = require("../components/push");
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -146,7 +147,7 @@ async function run() {
 				}
 				console.log("what");
 				await get_csv_all_users(page);
-
+				await push();
 				browser.close();
 				process.exit(1);
 			} else {

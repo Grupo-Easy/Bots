@@ -8,6 +8,8 @@
  * Resourceful controller for interacting with bolts
  */
 const bolt = use("App/Models/Bolt");
+const utf8 = require("utf8");
+
 class BoltController {
   async index() {
     return await bolt.all();
@@ -24,9 +26,10 @@ class BoltController {
     return await bolt.create(data);
   }
 
-  async search({ params, response }) {
-    const name = params.name.replace("%20", " ");
-    const db = await bolt.findBy("name", name);
+  async search({ request, response }) {
+    const name = request.headers().name;
+    console.log(name);
+    const db = await bolt.findBy("name", `${name}`);
     if (db) {
       return db;
     }
