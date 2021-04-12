@@ -19,16 +19,21 @@ class AuthController {
   }
   async login({ request, response, auth }) {
     const { authorization } = request.headers();
-    const data = await Buffer.from(
-      authorization.split(" ")[1],
-      "base64"
-    ).toString("utf-8");
-    let [username, password] = data.split(":");
-    console.log(username);
-    console.log(password);
-    const token = await auth.attempt(username, password);
-    console.log("não veio aqui");
-    return token;
+    try {
+      const data = await Buffer.from(
+        authorization.split(" ")[1],
+        "base64"
+      ).toString("utf-8");
+      let [username, password] = data.split(":");
+      console.log(username);
+      console.log(password);
+      const token = await auth.attempt(username, password);
+      console.log(token);
+      return token;
+    } catch (err) {
+      console.log(err);
+      return response.status(500).send("");
+    }
   }
   async auto_authenticate({ auth }) {
     const getUser = await auth.getUser();

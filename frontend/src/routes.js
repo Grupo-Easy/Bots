@@ -5,12 +5,14 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 
 const Routes = () => {
-  return (
-    <BrowserRouter>
-      <Route path="/" component={Home} exact />
-      <Route path="/dashboard" component={Dashboard} exact />
-      <Global />
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Route path="/" component={Home} exact />
+			<Route path="/dashboard" component={Dashboard} exact />
+			<Route path="/dashboar/bolt" component={Dashboard} exact />
+			<Route path="/dashboar/uber" component={Dashboard} exact />
+			<Global />
+		</BrowserRouter>
+	);
 };
 export default Routes;
