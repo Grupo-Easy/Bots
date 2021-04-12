@@ -5,6 +5,7 @@
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
 const bolt = use("App/Models/BoltGanho");
+const utf8 = require("utf8");
 
 class BoltGanhoController {
   async index({ params, response }) {
@@ -14,6 +15,7 @@ class BoltGanhoController {
     }
     return await bolt.all();
   }
+
   async create({ request, response }) {
     const { key } = await request.only(["key"]);
     const data = await request.only(["user_id", "name", "price", "gived"]);
@@ -24,6 +26,27 @@ class BoltGanhoController {
 
     const db = await bolt.create(data);
     return db;
+  }
+
+  async search({ request, response }) {
+    const { name, key } = request.headers();
+
+    if (key !== process.env.APP_KEY) {
+      return response.status(401).send("");
+    }
+
+    try {
+      const db = await bolt
+        .query()
+        .select("*")
+        .where("name", utf8.decode(name))
+        .fetch();
+
+      return response.status(200).send(db);
+    } catch (err) {
+      console.log(err);
+      return response.status(404).send({ name: utf8.decode(name), err });
+    }
   }
 }
 

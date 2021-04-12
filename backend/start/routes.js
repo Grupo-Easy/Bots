@@ -34,6 +34,7 @@ Route.group(() => {
   Route.get("bolt", "BoltController.index");
   Route.get("bolt/driver/", "BoltController.search");
   Route.get("bolt/lucros/:key", "BoltGanhoController.index");
+  Route.get("bolt/driver/lucros", "BoltGanhoController.search");
   Route.get("reset", "BotController.index");
 })
   .as("Bots")

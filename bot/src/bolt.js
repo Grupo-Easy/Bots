@@ -145,9 +145,8 @@ async function run() {
 						console.log(err);
 					}
 				}
-				console.log("what");
 				await get_csv_all_users(page);
-				await push();
+
 				browser.close();
 				process.exit(1);
 			} else {
