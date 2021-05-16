@@ -35,6 +35,16 @@ class BoltController {
     }
     return response.status(404).send("");
   }
+
+  async searchList() {
+    var value = [];
+    const db = await bolt.all();
+    for (let i = 0; i < db.rows.length; i++) {
+      const element = db.rows[i].$attributes.name;
+      value.push(element);
+    }
+    return value;
+  }
 }
 
 module.exports = BoltController;

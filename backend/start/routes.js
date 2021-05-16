@@ -33,6 +33,7 @@ Route.group(() => {
   Route.get("freenow", "GetDataController.store");
   Route.get("bolt", "BoltController.index");
   Route.get("bolt/driver/", "BoltController.search");
+  Route.get("bolt/driver/all", "BoltController.searchList");
   Route.get("bolt/lucros/:key", "BoltGanhoController.index");
   Route.get("bolt/driver/lucros", "BoltGanhoController.search");
   Route.get("reset", "BotController.index");
@@ -58,3 +59,10 @@ Route.group(() => {
 })
   .as("Public")
   .prefix("public/v1");
+
+Route.group(() => {
+  Route.get("me", "BotsAuthController.index");
+  Route.post("new", "BotController.create");
+})
+  .prefix("api/bot/v1")
+  .as("Internal Bots");
