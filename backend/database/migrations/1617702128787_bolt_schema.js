@@ -7,8 +7,8 @@ class BoltSchema extends Schema {
   up() {
     this.create("bolts", (table) => {
       table.increments();
-      table.string("name", 124).notNullable().unique();
-      table.string("status", 24).notNullable();
+      table.string("name").notNullable().unique();
+      table.string("status").notNullable();
       table.timestamps();
     });
   }

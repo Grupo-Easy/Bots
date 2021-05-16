@@ -7,15 +7,15 @@ class FreeNowSchema extends Schema {
   up() {
     this.create("free_nows", (table) => {
       table.increments();
-      table.string("id_freenow", 124).notNullable();
-      table.string("motorista", 124).notNullable();
-      table.string("rotas", 124).notNullable();
-      table.string("horas", 124).notNullable();
-      table.string("viagem", 124).notNullable();
-      table.string("preco", 124).notNullable();
-      table.string("extra", 124).notNullable();
-      table.string("servico", 124).notNullable();
-      table.string("metodo", 124).notNullable();
+      table.string("id_freenow").notNullable();
+      table.string("motorista").notNullable();
+      table.string("rotas").notNullable();
+      table.string("horas").notNullable();
+      table.string("viagem").notNullable();
+      table.string("preco").notNullable();
+      table.string("extra").notNullable();
+      table.string("servico").notNullable();
+      table.string("metodo").notNullable();
       table.timestamps();
     });
   }

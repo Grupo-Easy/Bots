@@ -7,19 +7,19 @@ class PrioSchema extends Schema {
   up() {
     this.create("prios", (table) => {
       table.increments();
-      table.string("Posto", 254).notNullable();
-      table.string("Rede", 254).notNullable();
-      table.string("Data", 254).notNullable();
-      table.string("Cartao", 254).notNullable();
-      table.string("Litros", 254).notNullable();
-      table.string("Combustivel", 254).notNullable();
-      table.string("Recibo", 254).notNullable();
-      table.string("Kms", 254).notNullable();
-      table.string("Idcond", 254).notNullable();
-      table.string("Fatura", 254).notNullable();
-      table.string("ValorUnit", 254).notNullable();
-      table.string("Total", 254).notNullable();
-      table.string("teste", 1);
+      table.string("Posto").notNullable();
+      table.string("Rede").notNullable();
+      table.string("Data").notNullable();
+      table.string("Cartao").notNullable();
+      table.string("Litros").notNullable();
+      table.string("Combustivel").notNullable();
+      table.string("Recibo").notNullable();
+      table.string("Kms").notNullable();
+      table.string("Idcond").notNullable();
+      table.string("Fatura").notNullable();
+      table.string("ValorUnit").notNullable();
+      table.string("Total").notNullable();
+      table.string("teste");
       table.timestamps();
     });
   }

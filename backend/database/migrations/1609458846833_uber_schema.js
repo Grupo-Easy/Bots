@@ -7,10 +7,10 @@ class UberSchema extends Schema {
   up() {
     this.create("ubers", (table) => {
       table.increments();
-      table.string("Nome", 254).notNullable().unique();
-      table.string("Despesas", 60).notNullable();
-      table.string("GanhosDeViagens", 60).notNullable();
-      table.string("Ganhos", 60).notNullable();
+      table.string("Nome").notNullable().unique();
+      table.string("Despesas").notNullable();
+      table.string("GanhosDeViagens").notNullable();
+      table.string("Ganhos").notNullable();
       table.timestamps();
     });
   }

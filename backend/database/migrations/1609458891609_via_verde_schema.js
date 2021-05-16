@@ -7,11 +7,11 @@ class ViaVerdeSchema extends Schema {
   up() {
     this.create("via_verdes", (table) => {
       table.increments();
-      table.string("Contrato", 60).notNullable();
-      table.string("Matricula", 60).notNullable();
-      table.string("Descricao", 124).notNullable();
-      table.string("Pagamento", 124).notNullable();
-      table.string("Valor", 124).notNullable();
+      table.string("Contrato").notNullable();
+      table.string("Matricula").notNullable();
+      table.string("Descricao").notNullable();
+      table.string("Pagamento").notNullable();
+      table.string("Valor").notNullable();
       table.timestamps();
     });
   }

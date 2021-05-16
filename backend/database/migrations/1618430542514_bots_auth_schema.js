@@ -7,7 +7,7 @@ class BotsAuthSchema extends Schema {
   up() {
     this.create("bots_auths", (table) => {
       table.increments();
-      table.strings("name", 24);
+      table.string("name");
       table.timestamps();
     });
   }
